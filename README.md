@@ -1,4 +1,4 @@
-# DockerizedAppExample
+# DockerizedApp
 
 ## Development Usage
 
