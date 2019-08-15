@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+
+  angularclient:
+    container_name: angular-develop
+    build:
+      context: .
+      dockerfile: docker/ng-serve.dockerfile
+    ports:
+      - 4200:4200
+    volumes:
+      - .\src\client:/home/app
