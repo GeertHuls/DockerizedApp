@@ -1,0 +1,11 @@
+# DockerizedAppExample
+
+## Development Usage
+
+Build development image:
+> docker build -f docker/DockerfileDev -t angular:serve .
+
+Run app in development:
+> docker run -v <yourpath\>\src\client:/home/app -p 4200:4200 -d angular:serve
+
+Next open: http://localhost:4200.
