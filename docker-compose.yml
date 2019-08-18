@@ -6,8 +6,18 @@ services:
     container_name: angular-develop
     build:
       context: .
-      dockerfile: docker/ng-serve.dockerfile
+      dockerfile: docker/angular.dockerfile
     ports:
       - 4200:4200
     volumes:
       - .\src\client:/home/app
+
+  api:
+    container_name: api-develop
+    build:
+      context: .
+      dockerfile: docker/dotnetcore.dockerfile
+    ports:
+      - 5000:5000
+    volumes:
+      - .\src\server\api:/home/app
