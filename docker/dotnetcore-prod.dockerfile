@@ -10,4 +10,11 @@ RUN dotnet publish -c release `
     --output /home/publish && `
     rm /home/publish/web.config
 
-ENTRYPOINT [ "bash" ]
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+
+WORKDIR /home/app
+COPY --from=builder /home/publish .
+
+EXPOSE 5000
+
+ENTRYPOINT ["dotnet", "api.dll"]
