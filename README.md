@@ -2,13 +2,11 @@
 
 ## Development Usage
 
-Build development image:
-> docker build -f docker/ng-serve.dockerfile -t angular:serve .
-
-Run app in development:
-> docker run -v <yourpath\>\src\client:/home/app -p 4200:4200 -d angular:serve
-
-Or better yet, use the docker compose file:
+Run the app in development:
 > docker-compose up
 
-The dev environment will be ready at: http://localhost:4200.
+This will spin up both the client and api in development listening on:
+- client: http://localhost:4200
+- api: http://localhost:5000/api/values
+
+Changes made on the client will auto-refresh the browser. Changes made to the api will need a container restart.
