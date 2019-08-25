@@ -17,7 +17,6 @@ services:
       dockerfile: docker/angular-prod.dockerfile
 
   dotnetcoreapi:
-    container_name: apiprod
     build:
       context: .
       dockerfile: docker/dotnetcore-prod.dockerfile
