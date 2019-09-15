@@ -13,7 +13,11 @@ Changes made on the client will auto-refresh the browser. Changes made to the ap
 
 ## Production
 
-Likewise use the dedicated docker compose file to spin up a production environment:
+Likewise use the dedicated docker compose file to spin up a production environment.
+In order to produce the proper images, first use the docker compose files to build the app:
+> docker-compose -f docker-compose.prod.yml -f docker-compose.prod-build.yml build
+
+Afterwards to run the stack, use the following command:
 > docker-compose -f docker-compose.prod.yml up
 
 This will spin up the angular client, a dotnet core api and a nginx webserver used as the reversed proxy.
@@ -31,9 +35,3 @@ Both usages will end up with the following endpoints:
 
 To quickly cleanup the production environment, use:
 > docker-compose -f docker-compose.prod.yml down
-
-To rebuild the stack use:
-> docker-compose -f docker-compose.prod.yml up --build
-
-Or with the scale parameter:
-> docker-compose -f docker-compose.prod.yml up --build --scale dotnetcoreapi=2

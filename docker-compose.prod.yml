@@ -3,23 +3,15 @@ version: '3.6'
 services:
 
   api-gateway:
-    container_name: reverseproxy
-    build:
-      context: .
-      dockerfile: docker/nginx/api-gateway-prod.dockerfile
+    image: reverseproxy
     ports:
       - 80:80
 
   angularclient:
-    container_name: spaclientprod
-    build:
-      context: .
-      dockerfile: docker/angular-prod.dockerfile
+    image: spaclient:v1
 
   dotnetcoreapi:
-    build:
-      context: .
-      dockerfile: docker/dotnetcore-prod.dockerfile
+    image: apiserver:v1
 
 networks:
   default:

@@ -1,0 +1,18 @@
+version: '3.6'
+
+services:
+
+  api-gateway:
+    build:
+      context: .
+      dockerfile: docker/nginx/api-gateway-prod.dockerfile
+
+  angularclient:
+    build:
+      context: .
+      dockerfile: docker/angular-prod.dockerfile
+
+  dotnetcoreapi:
+    build:
+      context: .
+      dockerfile: docker/dotnetcore-prod.dockerfile
