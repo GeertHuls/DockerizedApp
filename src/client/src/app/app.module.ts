@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { MatToolbarModule, MatButtonModule } from  '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatCardModule } from  '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BooksComponent } from './books/books.component';
@@ -25,6 +23,8 @@ import { MoviesComponent } from './movies/movies.component';
     FlexLayoutModule,
     MatToolbarModule,
     MatButtonModule,
+    MatSidenavModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
