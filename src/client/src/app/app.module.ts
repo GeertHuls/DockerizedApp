@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { BooksComponent } from './books/books.component';
 import { HomeComponent } from './home/home.component';
 import { MoviesComponent } from './movies/movies.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BooksComponent,
     HomeComponent,
-    MoviesComponent
+    MoviesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
